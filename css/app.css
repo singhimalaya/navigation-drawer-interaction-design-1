@@ -1,7 +1,72 @@
+/* Common style rules */
+*:focus
+{
+    outline: none;
+}
+
 html, body
 {
     height: 100%;
 }
+
+body
+{
+    padding-top: 64px;
+    box-sizing: border-box;
+}
+
+#main_banner
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 44px;
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    z-index: 9999;
+}
+
+#main_banner a
+{
+    display: inline-block;
+    width: 24px;
+    height: 20px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 10px;
+    margin: 0 5px;
+    border-radius: 2px;
+}
+
+#main_banner a i
+{
+    display: block;
+}
+
+#ytd_url
+{
+    background-color: #ff0000;
+}
+
+#insta_url
+{
+    background-color: #ff0057;
+}
+
+#cdpn_url
+{
+    background-color: #000;
+}
+
+#web_url
+{
+    background-color: #143240;
+}
+/* Common style rules finished */
 
 body
 {
