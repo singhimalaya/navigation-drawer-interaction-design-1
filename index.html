@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Navigation drawer interaction design - 1</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    
+    <div id="app_cover">
+        <div id="app">
+            <div id="menu_nav" class="inactive">
+                <a href="#"><i class="fas fa-store"></i>Home</a>
+                <a href="#"><i class="fas fa-info-circle"></i>About us</a>
+                <a href="#"><i class="fas fa-shopping-basket"></i>Products</a>
+                <a href="#"><i class="fas fa-truck"></i>Services</a>
+                <a href="#"><i class="fas fa-sign-in-alt"></i>Log in</a>
+                <a href="#"><i class="fas fa-user-plus"></i>Sign up</a>
+                <a href="#"><i class="fas fa-passport"></i>Terms</a>
+            </div>
+            <div id="main" class="inactive">
+                <article>
+                    <img src="img/cse.png" alt="Article image">
+                    <h1>Customizing design of Google Custom Search Box using css</h1>
+                    <p>Google Custom Search enables you to create a search engine for your website, your blog, or a collection of websites. You can configure your search engine to search both web pages and images. You can fine-tune the ranking, customize the look and feel of the search results, and invite your friends or trusted users to help you build your custom search engine.</p>
+                </article>
+            </div>
+            <div id="menu_btn"><i class="fas fa-bars"></i></div>
+        </div>
+    </div>
+
+    <script>
+        let elms = document.querySelectorAll('.inactive');
+        let menuBtn = document.querySelector('#menu_btn i');
+
+        function showMenu()
+        {
+            if( menuBtn.classList.contains("fa-bars") )
+                menuBtn.classList = "fas fa-times";
+            else
+                menuBtn.classList = "fas fa-bars";
+
+            elms.forEach(function(elm){
+                elm.classList.toggle("inactive");
+            })
+        }
+
+        menuBtn.addEventListener("click",showMenu);
+    </script>
+
+</body>
+</html>
